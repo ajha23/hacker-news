@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react';
 import './ListContainer.scss'
 
 import { ListItems } from '../list-Items'
-import { Button } from '../../common';
 
 export const ListContainer = () => {
     const [data, setData] = useState([]);
@@ -35,7 +34,7 @@ export const ListContainer = () => {
             {data.map(item => {
                 return item.title ? <ListItems key={item.created_at} item={item} /> : null;
             })}
-            <Button onClick={handelMoreClick}>More</Button>
+            <button className="btn-more" onClick={handelMoreClick}>More</button>
         </ul>
     );
 };
