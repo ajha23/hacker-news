@@ -14,7 +14,7 @@ export const ListItems = ({ item }) => {
     };
 
     const handlePointClick = () => {
-        voteBtn.current.style.visibility= 'hidden';
+        voteBtn.current.style.visibility = 'hidden';
         setPoint(point + 1);
         localStorage.setItem(item.objectID, JSON.stringify(point + 1))
     };
@@ -33,15 +33,17 @@ export const ListItems = ({ item }) => {
                 <span className="badge badge-salmon">{item.num_comments}</span>
                 <span className="badge badge-green">{point}</span>
             </div>
-            <span ref={voteBtn}><Button onClick={handlePointClick}>&#9650;</Button></span>
-            {item.title}
-            <span className="url">{
-                item.url ?
-                    <a href={item.url}>
-                        {"(" + item.url.split('//')[1].split('/')[0] + ")"}
-                    </a>
-                    : null}
-            </span>
+            <div  className="title-container">
+                <span ref={voteBtn}><Button onClick={handlePointClick}>&#9650;</Button></span>
+                {item.title}
+                <span className="url">{
+                    item.url ?
+                        <a href={item.url}>
+                            {"(" + item.url.split('//')[1].split('/')[0] + ")"}
+                        </a>
+                        : null}
+                </span>
+            </div>
             <span className="btn-display-right"><Button onClick={handelHideClick}>&times;</Button></span>
         </li>
     );

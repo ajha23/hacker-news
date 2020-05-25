@@ -2,7 +2,11 @@
   padding:0.01em 16px;
   margin-top:16px;
   margin-bottom:16px;
-  margin-right: auto;
-  margin-left: auto;
-  width:75%;
+  @media only screen 
+  and (min-width: 320px) 
+  and (max-width: 812px) 
+  and (orientation: portrait){
+      padding:0 !important;
+      margin: 0 !important;
+  }
 }

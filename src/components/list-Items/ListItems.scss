@@ -46,6 +46,31 @@ ul li:last-child {
 
 .badge-container {
     display:inline-block; 
-    width:20%;
-    text-align:center;
+    width: 20%;
+    text-align: center;
+}
+
+.title-container {
+    display: inline-block;
+    padding: 0 2em 0.325em;
+}
+
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 824px) 
+and (orientation: portrait) { 
+    .btn-more{
+        width: 20em;
+        height: 3em;
+    }
+    .badge-container {
+        width: unset;
+        padding: 0.625em;
+        text-align: left;
+        font-size: 12px;
+    }
+    .title-container {
+        padding: 0 1.625em 0.325em 0;
+        font-size: 11px;
+    }
 }

@@ -34,7 +34,7 @@ export const ListContainer = () => {
             {data.map(item => {
                 return item.title ? <ListItems key={item.created_at} item={item} /> : null;
             })}
-            <button className="btn-more" onClick={handelMoreClick}>More</button>
+            <div  className="btn-container"><button className="btn-more" onClick={handelMoreClick}>More</button></div>
         </ul>
     );
 };
