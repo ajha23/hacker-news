@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from './App';
+import {Button} from '../Button';
 
-test('renders App component', () => {
-  render(<App />);
+test('renders Button Component', () => {
+  render(<Button/>);
   expect(render()).toMatchSnapshot();
 });
